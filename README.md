@@ -3,7 +3,7 @@
 2020-02-09
 
 ## Description:
-This application was made as part of a coding project for Eva Wiedmann, a student at _[Epicodus](http://www.epicodus.com)_, a vocational school for technology careers based in Portland, OR. The project is designed to create an application to catalog a company's products and let people leave reviews.
+This application was made as part of a coding project for Eva Wiedmann, a student at _[Epicodus](http://www.epicodus.com)_, a vocational school for technology careers based in Portland, OR. The project is designed to create an application to catalog a company's products and let people leave reviews. It includes user authentication functionality.
 
 ## Setup/Installation instructions:
 * Click the `Clone or download` button and copy the link.
