@@ -14,6 +14,9 @@
 <br>
 
 
+<% if current_user && current_user.admin %>
 <p><%= link_to "Create new product", new_product_path %></p>
+<% end %>
+
 
 <p><%= link_to "Return to products", products_path %></p>

@@ -16,7 +16,9 @@
   <p>No reviews listed for this product.</p>
 <% end %>
 
+<% if current_user %>
 <p><%= link_to "Add a review", new_product_review_path(@product) %></p>
+<% end %>
 
 <p><%= link_to "Edit", edit_product_path(@product) %></p>
 <p><%= link_to "Delete product", product_path(@product),
