@@ -1,0 +1,48 @@
+<h1>MARIO'S</h1>
+<h3 id="fine">Fine Foods Provided with a Smile!</h3>
+<h4><i>Contact Information</i></h4>
+<ul>
+  <li>Telephone: 123-456-7891</li>
+  <li>Email: mario@foods.com</li>
+  <li>Address: 1234 Main St.</li>
+</ul>
+
+<h4>What people are talking about most:</h4>
+
+<% if @product.any? %>
+<ul>
+  <% @product.pop_reviewed.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are no products yet.</p>
+<% end %>
+
+<h4>Our newest products:</h4>
+
+<% if @product.any? %>
+<ul>
+  <% @product.newest_reviews.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+<% end %>
+<br>
+
+
+<h4>Products made in the USA:</h4>
+
+<% if @product.any? %>
+<ul>
+  <% @product.usa_made_product.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are no products made in the United States yet.</p>
+<% end %>
+
+
+<p><%= link_to "Create new product", new_product_path %></p>
+<p><%= link_to "Current Products", products_path %></p>

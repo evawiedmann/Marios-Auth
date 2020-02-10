@@ -1,0 +1,19 @@
+<h1>MARIO'S</h1>
+
+<h4>Current Inventory</h4>
+
+<% if @product.any? %>
+<ul>
+  <% @product.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are no products yet.</p>
+<% end %>
+<br>
+
+
+<p><%= link_to "Create new product", new_product_path %></p>
+
+<p><%= link_to "Return to products", products_path %></p>
